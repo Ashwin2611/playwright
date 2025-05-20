@@ -1,0 +1,31 @@
+Options2 locator('//select[@id=\'country\']/option')
+
+        United States
+      
+
+        Canada
+      
+
+        United Kingdom
+      
+
+        Germany
+      
+
+        France
+      
+
+        Australia
+      
+
+        Japan
+      
+
+        China
+      
+
+        Brazil
+      
+
+        India
+      

@@ -1,0 +1,36 @@
+Text:  Account Assistant
+Text:  Automaton Tester
+Text:  Chief Executive Officer
+Text:  Chief Financial Officer
+Text:  Chief Technical Officer
+Text:  Content Specialist
+Text:  Customer Success Manager
+Text:  Database Administrator
+Text:  Finance Manager
+Text:  Financial Analyst
+Text:  Head of Support
+Text:  HR Associate
+Text:  HR Manager
+Text:  Human Metrics Supervisor
+Text:  IT Manager
+Text:  Jr.Automation Tester
+Text:  Network Administrator
+Text:  Payroll Administrator
+Text:  Pre-Sales Coordinator
+Text:  QA Engineer
+Text:  QA Lead
+Text:  qwer
+Text:  Recruiter
+Text:  Regional Data Director
+Text:  rsjsrii
+Text:  Sales Representative
+Text:  Selenium00t00
+Text:  Selenium00t01
+Text:  Social Media Marketer
+Text:  Software Architect
+Text:  Software Engineer
+Text:  Software Engineer 2
+Text:  Software Engineer 5
+Text:  Support Specialist
+Text:  VP - Client Services
+Text:  VP - Sales & Marketing

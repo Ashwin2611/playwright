@@ -1,0 +1,204 @@
+# Test info
+
+- Name: Validate Goodle search
+- Location: C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\16_AutoSuggestionDropdown.spec.js:26:5
+
+# Error details
+
+```
+Error: page.goto: Test timeout of 30000ms exceeded.
+Call log:
+  - navigating to "https://www.easycalculation.com/search.php", waiting until "load"
+
+    at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\16_AutoSuggestionDropdown.spec.js:39:14
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "easycalculation.com":
+    - /url: //www.easycalculation.com/
+    - img "easycalculation.com"
+  - textbox "Google Custom Search"
+  - button "🔍"
+  - text: English
+  - link "Sign in":
+    - /url: https://www.login.hiox.com/login?referrer=easycalculation.com
+- navigation:
+  - list:
+    - listitem:
+      - link "Calculators":
+        - /url: //www.easycalculation.com/index.php
+    - listitem:
+      - link "Converters":
+        - /url: //www.easycalculation.com/unit-conversion/index.php
+    - listitem:
+      - link "Formulas":
+        - /url: //www.easycalculation.com/formulas/index.php
+    - listitem:
+      - link "Currencies":
+        - /url: //www.easycalculation.com/currency-converter/index.php
+    - listitem:
+      - link "Charts":
+        - /url: //www.easycalculation.com/charts-and-tables.php
+    - listitem:
+      - link "Examples":
+        - /url: //www.easycalculation.com/examples.php
+    - listitem:
+      - link "Tutorials":
+        - /url: //www.easycalculation.com/tutorial.php
+    - listitem:
+      - link "Answers":
+        - /url: //www.easycalculation.com/faq/index.php
+    - listitem:
+      - link "Others":
+        - /url: "#"
+- paragraph: Search Results | calculators and converters on easycalculation.com.
+- paragraph: Free Online Calculators and Converters. This web site will help all the persons who like to learn and play with maths. It will be very much fun and also informative.
+- heading "english Calculators and Converters" [level=3]:
+  - link "english Calculators and Converters":
+    - /url: //www.easycalculation.com
+    - img "english"
+    - text: Calculators and Converters
+- heading "Top Calculators" [level=2]
+- list:
+  - listitem:
+    - link "Age Calculator Age Calculator":
+      - /url: https://www.easycalculation.com/date-day/age-calculator.php
+      - img "Age Calculator"
+      - text: Age Calculator
+  - listitem:
+    - link "Standard Deviation SD Calculator":
+      - /url: https://www.easycalculation.com/statistics/standard-deviation.php
+      - img "Standard Deviation"
+      - text: SD Calculator
+  - listitem:
+    - link "Logarithm Logarithm":
+      - /url: https://www.easycalculation.com/log-antilog.php
+      - img "Logarithm"
+      - text: Logarithm
+  - listitem:
+    - link "LOVE Game LOVE Game":
+      - /url: https://www.easycalculation.com/love/love.php
+      - img "LOVE Game"
+      - text: LOVE Game
+- heading "Popular Calculators" [level=2]
+- list:
+  - listitem:
+    - link "Derivative Calculator":
+      - /url: //www.easycalculation.com/differentiation/derivative-calculator.php
+  - listitem:
+    - link "Inverse of Matrix Calculator":
+      - /url: //www.easycalculation.com/matrix/matrix-inverse.php
+  - listitem:
+    - link "Compound Interest Calculator":
+      - /url: //www.easycalculation.com/compound-interest.php
+  - listitem:
+    - link "Pregnancy Calculator Online":
+      - /url: //www.easycalculation.com/health/pregnancy.php
+- heading "Top Categories" [level=2]
+- list:
+  - listitem:
+    - link "Algebra":
+      - /url: //www.easycalculation.com/algebra/algebra.php
+  - listitem:
+    - link "Analytical":
+      - /url: //www.easycalculation.com/analytical/analytical.php
+  - listitem:
+    - link "Date Day":
+      - /url: //www.easycalculation.com/date-day/dates.php
+  - listitem:
+    - link "Finance":
+      - /url: //www.easycalculation.com/finance/finance.php
+  - listitem:
+    - link "Health":
+      - /url: //www.easycalculation.com/health/health.php
+  - listitem:
+    - link "Mortgage":
+      - /url: //www.easycalculation.com/mortgage/mortgage.php
+  - listitem:
+    - link "Numbers":
+      - /url: //www.easycalculation.com/numbers.php
+  - listitem:
+    - link "Physics":
+      - /url: //www.easycalculation.com/physics/physics.php
+  - listitem:
+    - link "Statistics":
+      - /url: //www.easycalculation.com/statistics/statistics.php
+  - link "More":
+    - /url: //www.easycalculation.com/calculators.php
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from "@playwright/test";
+   2 |
+   3 | test("Auto Suggest Dropdown", async ({ page }) => {
+   4 |   await page.goto("https://www.google.com/");
+   5 |   await page.fill("#APjFqb", "playwright");
+   6 |
+   7 |   await page.waitForSelector("//div[@class='wM6W7d']/span");
+   8 |   const option = await page.$$("//div[@class='wM6W7d']/span");
+   9 |
+  10 |   for (const opt of option) {
+  11 |     const opttext = await opt.textContent();
+  12 |     console.log("Text Content: ", opttext);
+  13 |     if (opttext.includes("playwright tutorial")) {
+  14 |       await opt.click();
+  15 |       break;
+  16 |     }
+  17 |   }
+  18 |   await page.goto("https://playwright.dev/");
+  19 |   console.log(await page.title());
+  20 |   await expect(page).toHaveTitle(
+  21 |     "Fast and reliable end-to-end testing for modern web apps | Playwright"
+  22 |   );
+  23 |   await page.waitForTimeout(3000);
+  24 | });
+  25 |
+  26 | test("Validate Goodle search", async ({ page }) => {
+  27 |   await page.goto("https://www.google.com/");
+  28 |
+  29 |   await page.fill("#APjFqb", "easycalculation");
+  30 |   await page.waitForSelector("//div[@class='wM6W7d']/span");
+  31 |   const options = await page.$$("//div[@class='wM6W7d']/span");
+  32 |   for (const option of options) {
+  33 |     const text = await option.textContent();
+  34 |     console.log("Text Content: ", text);
+  35 |   }
+  36 |   await page.click("(//div[@class='wM6W7d']/span)[1]");
+  37 |   await page.waitForTimeout(3000);
+  38 |   //   await expect(page.locator("//a[@class='zReHs'])[1]")).toBeVisible();
+> 39 |   await page.goto("https://www.easycalculation.com/search.php");
+     |              ^ Error: page.goto: Test timeout of 30000ms exceeded.
+  40 |   await page.waitForTimeout(3000);
+  41 |   await page.fill("#googleSearchId", "playwright");
+  42 |   await page.click("//button[@class='search_button']");
+  43 |   await page.waitForTimeout(5000);
+  44 |   expect(page.locator("//a[contains(text(), 'How to Use ')]")).toBeVisible();
+  45 |   await page.goto("https://apidog.com/blog/playwright-mcp/");
+  46 |   await page.waitForTimeout(3000);
+  47 |   await expect(
+  48 |     page.locator("//a[@href='/en/']//*[name()='svg']")
+  49 |   ).toBeVisible();
+  50 | });
+  51 |
+  52 | test("Auto Suggest in google search", async ({ page }) => {
+  53 |   await page.goto("https://www.google.com/");
+  54 |   await page.fill("#APjFqb", "Javascript");
+  55 |   await page.waitForSelector("//div[@class='wM6W7d']/span");
+  56 |   const options = await page.$$("//div[@class='wM6W7d']/span");
+  57 |   for (const option of options) {
+  58 |     const text = await option.textContent();
+  59 |     console.log("Text Content: ", text);
+  60 |     if(text.includes("javascript tutorial")){
+  61 |       await option.click();
+  62 |       break;
+  63 |     }
+  64 |   }
+  65 |
+  66 | });
+  67 |
+```

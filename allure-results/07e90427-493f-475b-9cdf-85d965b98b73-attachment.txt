@@ -1,0 +1,8 @@
+Text Content:  playwright
+Text Content:  playwright automation
+Text Content:  playwright testing
+Text Content:  playwright mcp
+Text Content:  playwright interview questions
+Text Content:  playwright vs selenium
+Text Content:  playwright tutorial
+https://www.google.com/search?safe=active&q=playwright+tutorial&sca_esv=18d1df816f52c143&source=hp&ei=x18saPv5G6rd1e8PyM_GoA8&iflsig=ACkRmUkAAAAAaCxt130l7y8HHPlS3QN_TBch5cR4Uh3i&oq=playwright&gs_lp=Egdnd3Mtd2l6IgpwbGF5d3JpZ2h0KgIIBjIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgUQABiABDILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMggQABiABBixAzILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMgUQABiABDILEAAYgAQYsQMYigVIxQRQAFgAcAB4AJABAJgBXKABXKoBATG4AQHIAQD4AQGYAgGgAoIBmAMAkgcDMC4xoAeeBbIHAzAuMbgHggHCBwM0LTHIByA&sclient=gws-wiz&sei=yl8saP-SA96enesPjpqrmQE&safe=active
