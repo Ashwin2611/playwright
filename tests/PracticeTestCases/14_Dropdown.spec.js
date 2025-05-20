@@ -31,7 +31,7 @@ test("Test Dropdown", async ({ page }) => {
   await page.close();
 });
 
-test.only("Dropdown for facebook", async ({ page }) => {
+test("Dropdown for facebook", async ({ page }) => {
   await page.goto("https://www.facebook.com/r.php?entry_point=login");
 
   await page.selectOption("#day", "29");
