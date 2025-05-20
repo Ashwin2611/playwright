@@ -38,8 +38,6 @@ test.describe("Javascript Alert, Confirm, Prompt in Playwright", () => {
       await dialog.accept("Welcome to Playwright Learning.....!");
     });
     await page.locator("text=Click for JS Confirm").click();
-    await expect(page.locator("#result")).toHaveText(
-      "You entered:Welcome to Playwrite Learning.....!"
-    );
+    await expect(page.locator("#result")).toHaveText("You clicked: Ok");
   });
 });
