@@ -1,0 +1,12 @@
+No.of Columns:  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3160,
+  [Symbol(trigger_async_id_symbol)]: 1140,
+  [Symbol(kResourceStore)]: undefined
+}
+No.of rows:  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3412,
+  [Symbol(trigger_async_id_symbol)]: 3196,
+  [Symbol(kResourceStore)]: undefined
+}

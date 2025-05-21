@@ -1,0 +1,125 @@
+# Test info
+
+- Name: selenium vs robot framework
+- Location: C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:13:7
+
+# Error details
+
+```
+Error: locator.press: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByPlaceholder('Search')
+
+    at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:17:43
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "About":
+    - /url: https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header
+  - link "Store":
+    - /url: https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN
+  - link "Gmail":
+    - /url: https://mail.google.com/mail/&ogbl
+  - link "Search for Images":
+    - /url: https://www.google.com/imghp?hl=en&ogbl
+    - text: Images
+  - button "Google apps":
+    - img
+  - link "Sign in":
+    - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+- img
+- search:
+  - img
+  - combobox "Search" [expanded]:
+    - text: selenium vs robot framework
+    - listbox:
+      - option "selenium vs robot framework"
+      - option "selenium and robot framework"
+      - option "selenium python vs robot framework"
+      - option "cypress vs selenium vs robot framework"
+      - option "difference between selenium and robot framework"
+      - option "robot framework selenium example"
+      - option "does robot framework use selenium"
+      - option "selenium vs robot"
+      - option "robot framework vs selenium java"
+      - option "robot framework vs selenium webdriver"
+  - button "Clear":
+    - img
+  - button "Search by voice":
+    - img
+  - button "Search by image":
+    - img
+  - button "Google Search"
+  - button "I'm Feeling Lucky"
+  - button "Report inappropriate predictions"
+  - button "Google Search"
+  - button "I'm Feeling Lucky"
+- text: "I/O Recap:"
+- link "See how we're making AI more helpful with Gemini"
+- text: "Google offered in:"
+- link "हिन्दी":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCBc
+- link "বাংলা":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCBg
+- link "తెలుగు":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCBk
+- link "मराठी":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCBo
+- link "தமிழ்":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCBs
+- link "ગુજરાતી":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCBw
+- link "ಕನ್ನಡ":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCB0
+- link "മലയാളം":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCB4
+- link "ਪੰਜਾਬੀ":
+  - /url: https://www.google.com/setprefs?sig=0_M03EtlykkJxUVlELoZ34ZX8VHAA%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwiKs_juubSNAxWAnK8BHU27MNkQ2ZgBCB8
+- contentinfo:
+  - text: India
+  - link "Advertising":
+    - /url: https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+  - link "Business":
+    - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+  - link "How Search works":
+    - /url: https://google.com/search/howsearchworks/?fg=1
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy?hl=en-IN&fg=1
+  - link "Terms":
+    - /url: https://policies.google.com/terms?hl=en-IN&fg=1
+  - button "Settings"
+- dialog "Sign in to Google":
+  - text: Sign in to Google Get the most from your Google account
+  - button "Stay signed out"
+  - button "Sign in"
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from "@playwright/test";
+   2 |
+   3 | const testValue = [
+   4 |   "selenium vs playwright",
+   5 |   "selenium vs playwright vs cypress",
+   6 |   "selenium vs cucumber",
+   7 |   "selenium vs robot framework",
+   8 |   "playwright automation",
+   9 |   "playwright automation framework",
+  10 | ];
+  11 |
+  12 | for (const value of testValue) {
+  13 |   test(`${value}`, async ({ page }) => {
+  14 |     await page.goto("https://www.google.com/");
+  15 |     await page.fill("#APjFqb", value);
+  16 |     await page.waitForTimeout(2000)
+> 17 |     await page.getByPlaceholder("Search").press("Enter");
+     |                                           ^ Error: locator.press: Test timeout of 30000ms exceeded.
+  18 |     await page.waitForTimeout(2000)
+  19 |   });
+  20 | }
+  21 |
+```

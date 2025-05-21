@@ -1,10 +1,166 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="30.639664000000003">
-<testsuite name="22_Reports.spec.js" timestamp="2025-05-20T10:18:51.859Z" hostname="chromium" tests="3" failures="0" skipped="0" time="40.344" errors="0">
-<testcase name="Test1" classname="22_Reports.spec.js" time="7.089">
+<testsuites id="" name="" tests="6" failures="5" skipped="0" errors="0" time="50.93010999999999">
+<testsuite name="32_ParameterPract.spec.js" timestamp="2025-05-21T11:36:43.423Z" hostname="chromium" tests="6" failures="5" skipped="0" time="126.673" errors="0">
+<testcase name="selenium vs playwright" classname="32_ParameterPract.spec.js" time="19.801">
+<failure message="32_ParameterPract.spec.js:13:7 selenium vs playwright" type="FAILURE">
+<![CDATA[  [chromium] › 32_ParameterPract.spec.js:13:7 › selenium vs playwright ─────────────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+
+
+      17 |     await page.locator("#APjFqb").press("Enter");
+      18 |     await page.waitForTimeout(5000)
+    > 19 |     await expect(page.locator("//a[@id='logo']//*[name()='svg']")).toBeVisible();
+         |                                                                    ^
+      20 |   });
+      21 | }
+      22 |
+        at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:19:68
+
+    Error Context: ..\..\test-results\32_ParameterPract-selenium-vs-playwright-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\32_ParameterPract-selenium-vs-playwright-chromium\error-context.md]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Test2" classname="22_Reports.spec.js" time="15.677">
+<testcase name="selenium vs playwright vs cypress" classname="32_ParameterPract.spec.js" time="25.434">
+<failure message="32_ParameterPract.spec.js:13:7 selenium vs playwright vs cypress" type="FAILURE">
+<![CDATA[  [chromium] › 32_ParameterPract.spec.js:13:7 › selenium vs playwright vs cypress ──────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+
+
+      17 |     await page.locator("#APjFqb").press("Enter");
+      18 |     await page.waitForTimeout(5000)
+    > 19 |     await expect(page.locator("//a[@id='logo']//*[name()='svg']")).toBeVisible();
+         |                                                                    ^
+      20 |   });
+      21 | }
+      22 |
+        at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:19:68
+
+    Error Context: ..\..\test-results\32_ParameterPract-selenium-vs-playwright-vs-cypress-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\32_ParameterPract-selenium-vs-playwright-vs-cypress-chromium\error-context.md]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Test3" classname="22_Reports.spec.js" time="17.578">
+<testcase name="selenium vs cucumber" classname="32_ParameterPract.spec.js" time="22.181">
+<failure message="32_ParameterPract.spec.js:13:7 selenium vs cucumber" type="FAILURE">
+<![CDATA[  [chromium] › 32_ParameterPract.spec.js:13:7 › selenium vs cucumber ───────────────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+
+
+      17 |     await page.locator("#APjFqb").press("Enter");
+      18 |     await page.waitForTimeout(5000)
+    > 19 |     await expect(page.locator("//a[@id='logo']//*[name()='svg']")).toBeVisible();
+         |                                                                    ^
+      20 |   });
+      21 | }
+      22 |
+        at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:19:68
+
+    Error Context: ..\..\test-results\32_ParameterPract-selenium-vs-cucumber-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\32_ParameterPract-selenium-vs-cucumber-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="selenium vs robot framework" classname="32_ParameterPract.spec.js" time="20.754">
+<failure message="32_ParameterPract.spec.js:13:7 selenium vs robot framework" type="FAILURE">
+<![CDATA[  [chromium] › 32_ParameterPract.spec.js:13:7 › selenium vs robot framework ────────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+
+
+      17 |     await page.locator("#APjFqb").press("Enter");
+      18 |     await page.waitForTimeout(5000)
+    > 19 |     await expect(page.locator("//a[@id='logo']//*[name()='svg']")).toBeVisible();
+         |                                                                    ^
+      20 |   });
+      21 | }
+      22 |
+        at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:19:68
+
+    Error Context: ..\..\test-results\32_ParameterPract-selenium-vs-robot-framework-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\32_ParameterPract-selenium-vs-robot-framework-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="playwright automation" classname="32_ParameterPract.spec.js" time="20.525">
+</testcase>
+<testcase name="playwright automation framework" classname="32_ParameterPract.spec.js" time="17.978">
+<failure message="32_ParameterPract.spec.js:13:7 playwright automation framework" type="FAILURE">
+<![CDATA[  [chromium] › 32_ParameterPract.spec.js:13:7 › playwright automation framework ────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('//a[@id=\'logo\']//*[name()=\'svg\']')
+
+
+      17 |     await page.locator("#APjFqb").press("Enter");
+      18 |     await page.waitForTimeout(5000)
+    > 19 |     await expect(page.locator("//a[@id='logo']//*[name()='svg']")).toBeVisible();
+         |                                                                    ^
+      20 |   });
+      21 | }
+      22 |
+        at C:\Users\ashwin.murugan\playwrite -training\playwrightdemo\tests\PracticeTestCases\32_ParameterPract.spec.js:19:68
+
+    Error Context: ..\..\test-results\32_ParameterPract-playwright-automation-framework-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\32_ParameterPract-playwright-automation-framework-chromium\error-context.md]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

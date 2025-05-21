@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 6
     },
     "preserveOutput": "always",
     "reporter": [
@@ -40,6 +40,12 @@
         {
           "outputFile": "result.xml"
         }
+      ],
+      [
+        "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "allure-results"
+        }
       ]
     ],
     "reportSlowTests": {
@@ -53,7 +59,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 6
         },
         "id": "chromium",
         "name": "chromium",
@@ -69,7 +75,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 6
         },
         "id": "firefox",
         "name": "firefox",
@@ -85,7 +91,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 6
         },
         "id": "webkit",
         "name": "webkit",
@@ -106,14 +112,14 @@
   },
   "suites": [
     {
-      "title": "22_Reports.spec.js",
-      "file": "22_Reports.spec.js",
+      "title": "32_ParameterPract.spec.js",
+      "file": "32_ParameterPract.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Test1",
-          "ok": true,
+          "title": "selenium vs playwright",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -126,28 +132,58 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7089,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 19801,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68",
+                    "location": {
+                      "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                      "column": 68,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                        "column": 68,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-05-20T10:19:00.662Z",
+                  "startTime": "2025-05-21T11:36:59.691Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "_error-context-0",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\test-results\\32_ParameterPract-selenium-vs-playwright-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                    "column": 68,
+                    "line": 19
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "4900facfc01dee61dcaa-c40f5ccb536d062f75b8",
-          "file": "22_Reports.spec.js",
-          "line": 2,
-          "column": 5
+          "id": "96e1f20d0fc315c536de-465c793747c17f790bcd",
+          "file": "32_ParameterPract.spec.js",
+          "line": 13,
+          "column": 7
         },
         {
-          "title": "Test2",
-          "ok": true,
+          "title": "selenium vs playwright vs cypress",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -160,28 +196,58 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 15677,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 25434,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68",
+                    "location": {
+                      "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                      "column": 68,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                        "column": 68,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-05-20T10:19:00.747Z",
+                  "startTime": "2025-05-21T11:36:59.802Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "_error-context-0",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\test-results\\32_ParameterPract-selenium-vs-playwright-vs-cypress-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                    "column": 68,
+                    "line": 19
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "4900facfc01dee61dcaa-8b29ebe3d48f2debca9a",
-          "file": "22_Reports.spec.js",
-          "line": 9,
-          "column": 5
+          "id": "96e1f20d0fc315c536de-2dc5edb1949f98c9d568",
+          "file": "32_ParameterPract.spec.js",
+          "line": 13,
+          "column": 7
         },
         {
-          "title": "Test3",
-          "ok": true,
+          "title": "selenium vs cucumber",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -194,13 +260,141 @@
                 {
                   "workerIndex": 2,
                   "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 22181,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68",
+                    "location": {
+                      "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                      "column": 68,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                        "column": 68,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-05-21T11:36:59.826Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "_error-context-0",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\test-results\\32_ParameterPract-selenium-vs-cucumber-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                    "column": 68,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "96e1f20d0fc315c536de-227f4fc7da73e8339bac",
+          "file": "32_ParameterPract.spec.js",
+          "line": 13,
+          "column": 7
+        },
+        {
+          "title": "selenium vs robot framework",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 20754,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68",
+                    "location": {
+                      "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                      "column": 68,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                        "column": 68,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-05-21T11:36:59.879Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "_error-context-0",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\test-results\\32_ParameterPract-selenium-vs-robot-framework-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                    "column": 68,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "96e1f20d0fc315c536de-47724fb268cfef6fa4b8",
+          "file": "32_ParameterPract.spec.js",
+          "line": 13,
+          "column": 7
+        },
+        {
+          "title": "playwright automation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 17578,
+                  "duration": 20525,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-05-20T10:19:00.538Z",
+                  "startTime": "2025-05-21T11:36:59.835Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -208,21 +402,85 @@
               "status": "expected"
             }
           ],
-          "id": "4900facfc01dee61dcaa-4cf7bc03c197d7f8e19c",
-          "file": "22_Reports.spec.js",
-          "line": 15,
-          "column": 5
+          "id": "96e1f20d0fc315c536de-5f87970a40bf6d800f15",
+          "file": "32_ParameterPract.spec.js",
+          "line": 13,
+          "column": 7
+        },
+        {
+          "title": "playwright automation framework",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "failed",
+                  "duration": 17978,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68",
+                    "location": {
+                      "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                      "column": 68,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                        "column": 68,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//a[@id=\\'logo\\']//*[name()=\\'svg\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#APjFqb\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@id='logo']//*[name()='svg']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m }\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js:19:68\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-05-21T11:37:00.024Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "_error-context-0",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\test-results\\32_ParameterPract-playwright-automation-framework-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ashwin.murugan\\playwrite -training\\playwrightdemo\\tests\\PracticeTestCases\\32_ParameterPract.spec.js",
+                    "column": 68,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "96e1f20d0fc315c536de-05f8aae70e9a62ef7243",
+          "file": "32_ParameterPract.spec.js",
+          "line": 13,
+          "column": 7
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-20T10:18:51.747Z",
-    "duration": 30639.664000000004,
-    "expected": 3,
+    "startTime": "2025-05-21T11:36:43.143Z",
+    "duration": 50930.10999999999,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 5,
     "flaky": 0
   }
 }

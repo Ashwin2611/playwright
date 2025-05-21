@@ -5,7 +5,11 @@ test("SpiceJet Date Picker",async({page})=>{
     await page.click("//input[@data-focusvisible-polyfill='true']");
     await page.click("//div[contains(text(),'Ahmedabad')]");
     await page.click("//div[contains(text(),'Wed, 28 May 2025')]")
-    const day="28"
-    const month="September";
-    // const year=""
+    const day="29"
+    const month="May";
+    const year="2025"
+    while(true){
+        // const currentmonth=await page.locator("")
+    }
+
 })
