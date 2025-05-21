@@ -1,0 +1,84 @@
+# Test info
+
+- Name: Multi Select Dropdown
+- Location: C:\Users\ashwin.murugan\PWGitDemo\playwright\tests\PracticeTestCases\15_MultiSelectDropdown.spec.js:3:5
+
+# Error details
+
+```
+Error: page.goto: Test timeout of 30000ms exceeded.
+Call log:
+  - navigating to "https://testautomationpractice.blogspot.com/#", waiting until "load"
+
+    at C:\Users\ashwin.murugan\PWGitDemo\playwright\tests\PracticeTestCases\15_MultiSelectDropdown.spec.js:4:14
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from "@playwright/test";
+   2 |
+   3 | test("Multi Select Dropdown", async ({ page }) => {
+>  4 |   await page.goto("https://testautomationpractice.blogspot.com/#");
+     |              ^ Error: page.goto: Test timeout of 30000ms exceeded.
+   5 |   await page.selectOption("#colors", ["Red", "Blue", "Green", "Yellow"]);
+   6 |
+   7 |   const option = await page.$$("//select[@id='colors']/option");
+   8 |   expect(option.length).toBe(7);
+   9 |
+  10 |   let flag = false;
+  11 |   for (const opt of option) {
+  12 |     const opttext = await opt.textContent();
+  13 |     console.log(opttext);
+  14 |     if (opttext.includes("Yellow")) {
+  15 |       flag = true;
+  16 |       break;
+  17 |     }
+  18 |   }
+  19 |   expect(flag).toBeTruthy();
+  20 |   await page.waitForTimeout(3000);
+  21 |   await page.close();
+  22 | });
+  23 |
+  24 | test("Multi Selected Items", async ({ page }) => {
+  25 |   await page.goto("https://www.jquery-az.com/boots/demo.php?ex=63.0_2");
+  26 |
+  27 |   await page.click(".multiselect-selected-text");
+  28 |   const option = await page.$$(
+  29 |     "//ul[@class='multiselect-container dropdown-menu']/li//input"
+  30 |   );
+  31 |   expect(option.length).toBe(11);
+  32 |   await page.waitForSelector(
+  33 |     "//ul[@class='multiselect-container dropdown-menu']/li//label"
+  34 |   );
+  35 |   const options = await page.$$(
+  36 |     "//ul[@class='multiselect-container dropdown-menu']/li//label"
+  37 |   );
+  38 |   for (const opt of options) {
+  39 |     const opttxt = await opt.textContent();
+  40 |     console.log("Text:", opttxt);
+  41 |     if (
+  42 |       opttxt.includes("Java") ||
+  43 |       opttxt.includes("C#") ||
+  44 |       opttxt.includes("MySQL")
+  45 |     ) {
+  46 |       await opt.check();
+  47 |     }
+  48 |   }
+  49 |   await page.waitForTimeout(3000);
+  50 |   for (const opt of options) {
+  51 |     const opttxt = await opt.textContent();
+  52 |     console.log("Text:", opttxt);
+  53 |     if (
+  54 |       opttxt.includes("HTML") ||
+  55 |       opttxt.includes("C#") ||
+  56 |       opttxt.includes("CSS")
+  57 |     ) {
+  58 |       await opt.uncheck();
+  59 |     }
+  60 |   }
+  61 |   await page.waitForTimeout(3000);
+  62 |   await page.close();
+  63 | });
+  64 |
+```
